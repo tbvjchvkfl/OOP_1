@@ -52,18 +52,30 @@ public:
 	// 원점에서 선택한 좌표까지의 거리를 구하는 함수
 	double Distance() const;
 	
+	void Setter(int a, int b);
 };
 
 int main()
 {
 	Grid Stage;
+	double ax{};
+	double by{};
+	std::cin >> ax >> by;
+	Stage.Setter(ax, by);
 	Stage.PrintCoordinate();
 	Stage.Distance();
 }
 
+void Grid::Setter(int a, int b)
+
+{	
+	x = a;
+	y = b;
+}
+
 void Grid::PrintCoordinate()
 {
-	std::cin >> x >> y;
+	//std::cin >> x >> y;
 	std::cout << "선택된 좌표" << std::endl;
 	std::cout << "(" << x << ", " << y << ")" << std::endl;
 }
