@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include "Point.h"
 
 class AirConditioner
 {
@@ -39,6 +39,14 @@ public:
 //};
 
 
+int main()
+{
+	Point p1;
+	p1.Set(2, 3);
+	p1.Print();
+	std::cout << p1.Distance();
+}
+
 
 class Grid
 {
@@ -55,16 +63,16 @@ public:
 	void Setter(int a, int b);
 };
 
-int main()
-{
-	Grid Stage;
-	double ax{};
-	double by{};
-	std::cin >> ax >> by;
-	Stage.Setter(ax, by);
-	Stage.PrintCoordinate();
-	Stage.Distance();
-}
+//int main()
+//{
+//	Grid Stage;
+//	double ax{};
+//	double by{};
+//	std::cin >> ax >> by;
+//	Stage.Setter(ax, by);
+//	Stage.PrintCoordinate();
+//	Stage.Distance();
+//}
 
 void Grid::Setter(int a, int b)
 
